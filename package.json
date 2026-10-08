@@ -1,0 +1,27 @@
+{
+  "name": "career-quest",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c magenta,cyan \"npm:server\" \"npm:web\"",
+    "server": "node server/index.js",
+    "web": "vite",
+    "build": "vite build",
+    "start": "npm run build && node server/index.js"
+  },
+  "dependencies": {
+    "@xyflow/react": "^12.3.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "html-to-image": "^1.11.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "concurrently": "^9.0.1",
+    "vite": "^5.4.10"
+  }
+}
